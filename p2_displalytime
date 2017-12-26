@@ -1,0 +1,15 @@
+function showTime()
+{
+  const element = (
+  <div>
+      <h1>Current Time is:</h1>
+      <h2><font color='red'>{new Date().toLocaleTimeString()}</font></h2>
+   </div>
+  );
+  
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
+}
+setInterval(showTime,1000);
