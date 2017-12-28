@@ -1,0 +1,15 @@
+<script>
+  let promise = new Promise(function(resolve, reject) {
+  // the function is executed automatically when the promise is constructed
+
+  alert(resolve); // function () { [native code] }
+  alert(reject);  // function () { [native code] }
+
+  // after 1 second signal that the job is done with the result "done!"
+  setTimeout(() => reject(alert("rejected....!")), 5000);
+});
+
+promise.then(result =>alert("done"),error =>alert("error"));
+</script>
+
+
