@@ -1,0 +1,9 @@
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+
+ReactDOM.render(
+  <h2>Learning React</h2>,
+  document.getElementById('root')
+);
