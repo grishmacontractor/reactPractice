@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Info React Application</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+  function Avatar(props) {
+  return (
+    <img
+      src={props.avtarInfo.avatarUrl}
+      alt={props.avtarInfo.name}
+      width='50' height='80'
+    />
+  );
+}
+
+function PInfo(props) {
+  return (
+    <div>
+      <Avatar avtarInfo={props.pname} />
+      <div>
+        Product Name : {props.pname.name}
+      </div>
+    </div>
+  );
+}
+
+function Product(props) {
+  return (
+    <div>
+      <PInfo pname={props.pName} />
+      <div>
+        Product Id : {props.pId}
+      </div>
+      <div>
+        Price : {props.pPrice}
+      </div>
+    </div>
+  );
+}
+
+const productData= {
+  productId: 1,
+  price:
+    2000,
+  productName: {
+    name: 'Redmi Note 4 (Black, 64 GB)  (4 GB RAM)',
+  avatarUrl:'http://img.fkcdn.com/image/mobile/9/8/z/mi-redmi-note-4-na-original-imaeqdxjuadhagfc.jpeg',
+  },
+};
+ReactDOM.render(
+  <Product
+    pId={productData.productId}
+    pPrice={productData.price}
+    pName={productData.productName}
+  />,
+  document.getElementById('root')
+);
+
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      To set up a production-ready React build environment, follow these instructions:
+      * https://reactjs.org/docs/add-react-to-a-new-app.html
+      * https://reactjs.org/docs/add-react-to-an-existing-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      * https://reactjs.org/docs/react-without-jsx.html
+      * https://reactjs.org/docs/cdn-links.html
+    -->
+  </body>
+</html>
