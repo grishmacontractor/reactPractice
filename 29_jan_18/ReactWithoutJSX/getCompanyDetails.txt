@@ -1,0 +1,21 @@
+var CompanyDetails = React.createClass({
+
+	clickHandler: function(){
+alert("CompanyName = "+this.props.companyName+" and Address = "+this.props.address);
+  },
+	render: function(){
+		return (<button onClick={this.clickHandler} >Company Details</button>);
+	}
+});
+
+var Display = React.createClass({
+  render: function() {
+    return (
+      	<div>
+      		<CompanyDetails companyName='Jeavio' address='Alkapuri'/>
+      	</div>
+    );
+  }
+});
+
+ReactDOM.render(<Display />, document.getElementById('main'));

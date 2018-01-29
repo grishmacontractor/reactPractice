@@ -1,0 +1,5 @@
+ReactDOM.render(React.createElement(
+  'div',
+  null,
+  'Good Morning'
+), document.getElementById('root'));

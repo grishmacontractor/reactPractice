@@ -1,0 +1,21 @@
+#modal-root {
+    position: relative;
+    z-index: 999;
+}
+
+.app {
+    height: 10em;
+    width: 10em;
+    background: lightblue;
+    position: relative;
+
+    /*overflow: hidden;*/
+}
+
+.modal {
+    background-color: yellow;
+    height: 10em;;
+    width: 10em;;
+    position: relative;
+    overflow: scroll;
+}
